@@ -6,6 +6,11 @@ const { check, validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const config = require("config");
+
+// @route GET api/auth
+// @desc check JW Token for User login
+// @access  Public
+
 router.get("/login", auth, async (req, res) => {
   try {
     const user = await User.findById(req.user.id).select("-password");
@@ -41,7 +46,7 @@ router.post(
       if (!user) {
         return res
           .status(400)
-          .json({ errors: [{ msg: "Invalid Credentials" }] });
+          .json({ error: [{ msg: "Invalid Credentials" }] });
       }
 
       const isMatch = await bcrypt.compare(password, user.password);
@@ -49,7 +54,7 @@ router.post(
       if (!isMatch) {
         return res
           .status(400)
-          .json({ errors: [{ msg: "Invalid Credentials" }] });
+          .json({ error: [{ msg: "Invalid Credentials" }] });
       }
 
       const payLoad = {

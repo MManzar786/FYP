@@ -12,10 +12,9 @@ const User = require("../models/user");
 
 router.get("/profile/me", auth, async (req, res) => {
   try {
-    const profile = await Profile.findOne({ user: req.user.id }).populate(
-      "user",
-      ["name", "avatar"]
-    );
+    const profile = await Profile.findOne({
+      user: req.user.id
+    }).populate("user", ["name", "avatar"]);
 
     if (!profile) {
       return res.status(400).json({ msg: "There is no Profile for this user" });
@@ -40,7 +39,16 @@ router.post(
       check("name", "Name is Required")
         .not()
         .isEmpty(),
-      check("skills", "Skills are required")
+      check("emailId", "emailId is Required")
+        .not()
+        .isEmpty(),
+      check("degree", "Degree is Required")
+        .not()
+        .isEmpty(),
+      check("passingYear", "Passing Year is Required")
+        .not()
+        .isEmpty(),
+      check("jobStatus", "Job Status is Required")
         .not()
         .isEmpty()
     ]
@@ -51,38 +59,53 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const { name, skills, fatherName } = req.body;
+    const {
+      name,
+      fatherName,
+      emailId,
+      mobileNo,
+      address,
+      degree,
+      passingYear,
+      jobStatus
+    } = req.body;
 
     //Build profile object
     const profileFields = {};
     profileFields.user = req.user.id;
     if (name) profileFields.name = name;
     if (fatherName) profileFields.fatherName = fatherName;
-    if (skills) {
-      profileFields.skills = skills.split(",").map(skill => skill.trim());
-    }
-    // console.log(profileFields.skills);
+    if (emailId) profileFields.emailId = emailId;
+    if (mobileNo) profileFields.mobileNo = mobileNo;
+    if (address) profileFields.address = address;
+    if (degree) profileFields.degree = degree;
+    if (passingYear) profileFields.passingYear = passingYear;
+    if (jobStatus) profileFields.jobStatus = jobStatus;
+
+    // console.log(profileFields.user);
     // res.send("lala");
     try {
-      let profile = Profile.findOne({ user: req.user.id });
+      let profile = await Profile.findOne({ user: req.user.id });
 
       //update
       if (profile) {
-        console.log("user created");
+        console.log("user updated");
         profile = await Profile.findOneAndUpdate(
           { user: req.user.id },
           { $set: profileFields },
           { new: true }
         );
-        return res.send(profile);
+        res.send(profile);
       }
       //Create
       //   console.log(req.user.id);
-      profile = new Profile(profileFields);
-      console.log("userupdated");
+      else {
+        profile = new Profile(profileFields);
+        console.log("user profile created");
 
-      await profile.save();
-      return res.json(profile);
+        await profile.save();
+        return res.send(profile);
+      }
     } catch (err) {
       res.status(500).send("Server error");
     }

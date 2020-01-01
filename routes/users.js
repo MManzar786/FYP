@@ -10,10 +10,10 @@ const router = new express.Router();
 router.post(
   "/users/register",
   [
-    check("cnic", "cnic is required")
+    check("cnic", "CNIC is Required")
       .not()
       .isEmpty(),
-    check("password", "password lenght must be a lenght of 6").isLength({
+    check("password", "Password must be a lenght of 6").isLength({
       min: 6
     })
   ],
@@ -29,8 +29,8 @@ router.post(
       let user = await User.findOne({ cnic });
       if (user) {
         return res
-          .status(400)
-          .json({ errors: [{ msg: "User Already Exists" }] });
+          .status(403)
+          .json({ error: [{ msg: "User Already Exists" }] });
       }
       //gravatar
       const avatar = gravatar.url(cnic, {
