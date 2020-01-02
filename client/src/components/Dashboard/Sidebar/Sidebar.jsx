@@ -18,6 +18,7 @@
 /*eslint-disable*/
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Nav } from "reactstrap";
 // javascript plugin used to create scrollbars on windows
 import PerfectScrollbar from "perfect-scrollbar";
@@ -61,13 +62,14 @@ class Sidebar extends React.Component {
               <img src={logo} alt="react-logo" />
             </div>
           </a>
-          <a
+          <NavLink
             // href="https://www.creative-tim.com?ref=nudr-sidebar"
             className="simple-text logo-normal"
-            target="_blank"
+            to="/"
+            tag={Link}
           >
             KICSIT ALUMNI PORTAL
-          </a>
+          </NavLink>
         </div>
         <div className="sidebar-wrapper" ref="sidebar">
           <Nav>
