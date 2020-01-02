@@ -9,7 +9,7 @@ import "./App.css";
 
 import Navbar from "./components-2/layout/navbar";
 import Landing from "./components-2/layout/landing";
-import RegisterPage from "./views/examples/RegisterPage";
+// import RegisterPage from "./views/examples/RegisterPage";
 import Register from "./components-2/auth/Register";
 import Login from "./components-2/auth/Login";
 import Alert from "./components-2/layout/alert";
