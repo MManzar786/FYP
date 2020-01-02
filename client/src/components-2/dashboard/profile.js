@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { getCurrentProfile } from "../../actions/profile";
 import Spinner from "../layout/spinner";
+import ProfileActions from "./profileActions";
 import {
   Button,
   Card,
@@ -58,7 +59,9 @@ const Profile = ({
       {/* <h1 className="large text-primary">Your CNIC is</h1>
       <p className="lead">{user && user.cnic} </p> */}
       {profile !== null ? (
-        <Fragment>has </Fragment>
+        <Fragment>
+          <ProfileActions />{" "}
+        </Fragment>
       ) : (
         <Fragment>
           {/* <p className="text-dark">
@@ -67,7 +70,7 @@ const Profile = ({
           <ExamplesNavbar />
           <div
             style={{
-              backgroundColor: "black"
+              backgroundColor: "#FF5733"
             }}
             className="page-header"
             data-parallax={true}
