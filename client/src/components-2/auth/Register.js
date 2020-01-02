@@ -17,6 +17,7 @@ import {
   Col
 } from "reactstrap";
 import ExamplesNavbar from "./../../components/Navbars/ExamplesNavbar.js";
+import Navbar from "./../layout/navbar.js";
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -55,7 +56,8 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
       <p className="lead">
         <i className="fas fa-user"></i> Create Your Account
       </p> */}
-      <ExamplesNavbar />
+      {/* <ExamplesNavbar /> */}
+      <Navbar />
       <div
         className="page-header"
         style={{

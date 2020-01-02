@@ -15,8 +15,8 @@
 
  */
 
-@import 'now-ui-dashboard/variables';
-@import 'now-ui-dashboard/mixins';
+@import "now-ui-dashboard/variables";
+@import "now-ui-dashboard/mixins";
 
 // Plugins CSS
 @import "now-ui-dashboard/plugins/plugin-animate-bootstrap-notify";
@@ -35,7 +35,8 @@
 @import "now-ui-dashboard/dropdown";
 @import "now-ui-dashboard/alerts";
 @import "now-ui-dashboard/images";
-// @import "now-ui-dashboard/nucleo-outline";
+//@import "now-ui-dashboard/nucleo-outline";
+//@import "now-ui-dashboard/icons";
 @import "now-ui-dashboard/tables";
 @import "now-ui-dashboard/sidebar-and-main-panel";
 @import "now-ui-dashboard/footers";

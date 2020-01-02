@@ -98,7 +98,7 @@ function ExamplesNavbar() {
           </NavItem>
 
           <NavItem>
-            <NavLink to="/register-page" tag={Link}>
+            <NavLink to="/register" tag={Link}>
               REGISTER
             </NavLink>
           </NavItem>
