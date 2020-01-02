@@ -15,26 +15,24 @@ import {
 
 const navBar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
-    <UncontrolledCollapse navbar toggler="#navbar-transparent">
-      <Nav className="ml-auto" navbar>
-        <NavItem>
-          <NavLink to="/profile" tag={Link}>
-            Profile
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink to="/admin/dashboard" tag={Link}>
-            Dashboard
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink to="/" tag={Link}>
-            {/* <i aria-hidden={true} className="fa fa-instagram" /> */}
-            Log Out
-          </NavLink>
-        </NavItem>
-      </Nav>
-    </UncontrolledCollapse>
+    <>
+      <NavItem>
+        <NavLink to="/profile" tag={Link} style={{ color: "black" }}>
+          Profile
+        </NavLink>
+      </NavItem>
+      <NavItem>
+        <NavLink to="/admin/dashboard" tag={Link} style={{ color: "black" }}>
+          Dashboard
+        </NavLink>
+      </NavItem>
+      <NavItem>
+        <NavLink to="/" tag={Link} style={{ color: "black" }}>
+          {/* <i aria-hidden={true} className="fa fa-instagram" /> */}
+          Log Out
+        </NavLink>
+      </NavItem>
+    </>
     // <ul>
     //   <li>
     //     <Link to="/profile">
@@ -53,23 +51,20 @@ const navBar = ({ auth: { isAuthenticated, loading }, logout }) => {
     // </ul>
   );
   const guestLinks = (
-    <UncontrolledCollapse navbar toggler="#navbar-transparent">
-      <Nav className="ml-auto" navbar>
-        <NavItem>
-          <NavLink to="/login" tag={Link}>
-            <i aria-hidden={true} className="fa fa-facebook-official" />
-            Login
-          </NavLink>
-        </NavItem>
+    <>
+      <NavItem>
+        <NavLink to="/login" tag={Link} style={{ color: "black" }}>
+          Login
+        </NavLink>
+      </NavItem>
 
-        <NavItem>
-          <NavLink to="/register" tag={Link}>
-            {/* <i aria-hidden={true} className="fa fa-instagram" /> */}
-            register
-          </NavLink>
-        </NavItem>
-      </Nav>
-    </UncontrolledCollapse>
+      <NavItem>
+        <NavLink to="/register" tag={Link} style={{ color: "black" }}>
+          {/* <i aria-hidden={true} className="fa fa-instagram" /> */}
+          register
+        </NavLink>
+      </NavItem>
+    </>
 
     // <ul>
     //   <li>
