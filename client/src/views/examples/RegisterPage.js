@@ -34,6 +34,7 @@ import {
 
 // core components
 import ExamplesNavbar from "./../../components/Navbars/ExamplesNavbar.js";
+import NavBar from "./../../components-2/layout/navbar.js"
 
 function RegisterPage() {
   document.documentElement.classList.remove("nav-open");
