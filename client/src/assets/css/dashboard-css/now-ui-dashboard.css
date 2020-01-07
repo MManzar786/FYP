@@ -287,7 +287,7 @@ Copyright (c) 2015 Daniel Eden
   .show >
   .navbar .navbar-nav > a.btn.dropdown-toggle:hover {
     background-color: #979797;
-    color: #FFFFFF;
+    color: rgb(7, 3, 3);
     box-shadow: none;
     border-color: #979797; }
   .btn:not([data-action]):not([class*="btn-outline-"]):hover,
@@ -339,7 +339,7 @@ Copyright (c) 2015 Daniel Eden
     .navbar .navbar-nav > a.btn.btn-link:hover,
     .navbar .navbar-nav > a.btn.btn-link:focus,
     .navbar .navbar-nav > a.btn.btn-link:active {
-      background-color: transparent;
+      background-color: black;
       color: #979797;
       text-decoration: none;
       box-shadow: none; }
@@ -1690,7 +1690,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
   .navbar .navbar-nav .nav-item .nav-link:not(.btn):active {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 0.1875rem;
-    color: #FFFFFF; }
+    color: black; }
   .navbar .logo-container {
     width: 27px;
     height: 27px;
@@ -1718,9 +1718,12 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
   .navbar .button-dropdown .navbar-toggler-bar:nth-child(2) {
     width: 17px; }
   .navbar.navbar-transparent {
-    background-color: transparent !important;
+    /* background-color: transparent !important; */
     box-shadow: none;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+  position: absolute;
+top: 0px; 
+z-index: 10;}
   .navbar.bg-white:not(.navbar-transparent) a:not(.dropdown-item):not(.btn) {
     color: #888; }
     .navbar.bg-white:not(.navbar-transparent) a:not(.dropdown-item):not(.btn).disabled {

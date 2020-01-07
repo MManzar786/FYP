@@ -16,6 +16,7 @@ import {
   Row,
   Col
 } from "reactstrap";
+import Navbar from "./../layout/navbar.js";
 
 // core components
 import ExamplesNavbar from "./../../components/Navbars/ExamplesNavbar.js";
@@ -67,7 +68,8 @@ const Profile = ({
           {/* <p className="text-dark">
             You have not yet setup a profile, please add some info
           </p> */}
-          <ExamplesNavbar />
+          <Navbar />
+          {/* <ExamplesNavbar /> */}
           <div
             style={{
               backgroundColor: "#FF5733"

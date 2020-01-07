@@ -20,3 +20,14 @@
 .App-link {
   color: #09d3ac;
 }
+.navbar-transparent {
+  background-color: transparent !important;
+  padding-top: 5px;
+  box-shadow: none;
+  position: absolute !important;
+  left: 0px;
+  /* display: none !important; */
+  right: 0px;
+  top: 0px;
+  z-index: 10;
+}

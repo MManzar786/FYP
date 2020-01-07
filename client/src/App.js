@@ -15,6 +15,7 @@ import Login from "./components-2/auth/Login";
 import Alert from "./components-2/layout/alert";
 import Profile from "./components-2/dashboard/profile";
 import CreateProfile from "./components-2/dashboard/createProfile";
+import EditProfile from "./components-2/dashboard/editProfile";
 import PrivateRoute from "./components-2/routing/PrivateRoute";
 //styles
 // import "./assets/css/bootstrap.min.css";
@@ -91,18 +92,19 @@ const App = () => {
             {/* <Redirect to="/index" /> */}
             {/* <Route exact path="/" component={Landing} /> */}
             {/* <Route exact path="/login" component={LoginPage} /> */}
-            
+
             <Route path="/login" exact render={props => <Login {...props} />} />
-            
+
             <Route exact path="/register" component={Register} />
-            
+
             <Route exact path="/contact" component={ContactPage} />
-            
+
             <PrivateRoute
               exact
               path="/create-profile"
               component={CreateProfile}
             />
+            <PrivateRoute exact path="/edit-profile" component={EditProfile} />
 
             <PrivateRoute exact path="/profile" component={Profile} />
           </Switch>

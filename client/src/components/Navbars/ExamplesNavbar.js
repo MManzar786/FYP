@@ -31,6 +31,7 @@ import {
   Nav,
   Container
 } from "reactstrap";
+
 function ExamplesNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
@@ -40,27 +41,27 @@ function ExamplesNavbar() {
     document.documentElement.classList.toggle("nav-open");
   };
 
-  React.useEffect(() => {
-    const updateNavbarColor = () => {
-      if (
-        document.documentElement.scrollTop > 299 ||
-        document.body.scrollTop > 299
-      ) {
-        setNavbarColor("");
-      } else if (
-        document.documentElement.scrollTop < 300 ||
-        document.body.scrollTop < 300
-      ) {
-        setNavbarColor("navbar-transparent");
-      }
-    };
+  // React.useEffect(() => {
+  //   const updateNavbarColor = () => {
+  //     if (
+  //       document.documentElement.scrollTop > 299 ||
+  //       document.body.scrollTop > 299
+  //     ) {
+  //       setNavbarColor("");
+  //     } else if (
+  //       document.documentElement.scrollTop < 300 ||
+  //       document.body.scrollTop < 300
+  //     ) {
+  //       setNavbarColor("navbar-transparent");
+  //     }
+  //   };
 
-    window.addEventListener("scroll", updateNavbarColor);
+  //   window.addEventListener("scroll", updateNavbarColor);
 
-    return function cleanup() {
-      window.removeEventListener("scroll", updateNavbarColor);
-    };
-  });
+  // return function cleanup() {
+  //   window.removeEventListener("scroll", updateNavbarColor);
+  // };
+
   return (
     <Navbar
       className={classnames("fixed-top", navbarColor)}

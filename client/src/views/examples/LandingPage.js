@@ -100,7 +100,7 @@ function LandingPage() {
                     <CardImg
                       top
                       width="100%"
-                      src="./../../assets/img/apple-icon.png"
+                      src={require("./../../assets/img/k.png")}
                       alt="Card image cap"
                     />
                     <CardBody>
@@ -138,7 +138,7 @@ function LandingPage() {
                     <CardImg
                       top
                       width="100%"
-                      src="./../../assets/img/apple-icon.png"
+                      src={require("./../../assets/img/k.png")}
                       alt="Card image cap"
                     />
                     <CardBody>
@@ -172,11 +172,11 @@ function LandingPage() {
                   </div>
                 </div> */}
                 <div>
-                  <Card>
+                  {/* <Card>
                     <CardImg
                       top
                       width="100%"
-                      src="./../../assets/img/apple-icon.png"
+                      src={require("./../../assets/img/k.png")}
                       alt="Card image cap"
                     />
                     <CardBody>
@@ -190,7 +190,7 @@ function LandingPage() {
                       </CardText>
                       <Button>See More</Button>
                     </CardBody>
-                  </Card>
+                  </Card> */}
                 </div>
               </Col>
               <Col md="3">
@@ -211,11 +211,11 @@ function LandingPage() {
                 </div> */}
 
                 <div>
-                  <Card>
+                  {/* <Card>
                     <CardImg
                       top
                       width="100%"
-                      src="./../../assets/img/apple-icon.png"
+                      src={require("./../../assets/img/k.png")}
                       alt="Card image cap"
                     />
                     <CardBody>
@@ -229,7 +229,7 @@ function LandingPage() {
                       </CardText>
                       <Button>See More</Button>
                     </CardBody>
-                  </Card>
+                  </Card> */}
                 </div>
               </Col>
             </Row>
@@ -245,7 +245,7 @@ function LandingPage() {
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <img
                         alt="..."
-                        src={require("./../../assets/img/faces/clem-onojeghuo-3.jpg")}
+                        src={require("./../../assets/img/0.jpg")}
                       />
                     </a>
                   </div>
@@ -296,15 +296,15 @@ function LandingPage() {
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <img
                         alt="..."
-                        src={require("./../../assets/img/faces/joe-gardner-2.jpg")}
+                        src={require("./../../assets/img/kashif.jpg")}
                       />
                     </a>
                   </div>
                   <CardBody>
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <div className="author">
-                        <CardTitle tag="h4">Sophie West</CardTitle>
-                        <h6 className="card-category">Designer</h6>
+                        <CardTitle tag="h4">Kashif Muneer</CardTitle>
+                        <h6 className="card-category">IT Manager</h6>
                       </div>
                     </a>
                     <p className="card-description text-center">
@@ -314,7 +314,7 @@ function LandingPage() {
                       orchestra to play it.
                     </p>
                   </CardBody>
-                  <CardFooter className="text-center">
+                  {/* <CardFooter className="text-center">
                     <Button
                       className="btn-just-icon btn-neutral"
                       color="link"
@@ -338,8 +338,8 @@ function LandingPage() {
                       onClick={e => e.preventDefault()}
                     >
                       <i className="fa fa-linkedin" />
-                    </Button>
-                  </CardFooter>
+                    </Button> */}
+                  {/* </CardFooter> */}
                 </Card>
               </Col>
               <Col md="4">
@@ -348,15 +348,15 @@ function LandingPage() {
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <img
                         alt="..."
-                        src={require("./../../assets/img/faces/erik-lucatero-2.jpg")}
+                        src={require("./../../assets/img/fahim.jpg")}
                       />
                     </a>
                   </div>
                   <CardBody>
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <div className="author">
-                        <CardTitle tag="h4">Robert Orben</CardTitle>
-                        <h6 className="card-category">Developer</h6>
+                        <CardTitle tag="h4">Fahim Khan</CardTitle>
+                        <h6 className="card-category">IT manager</h6>
                       </div>
                     </a>
                     <p className="card-description text-center">
@@ -366,7 +366,7 @@ function LandingPage() {
                       it’s deadly.
                     </p>
                   </CardBody>
-                  <CardFooter className="text-center">
+                  {/* <CardFooter className="text-center">
                     <Button
                       className="btn-just-icon btn-neutral"
                       color="link"
@@ -391,7 +391,7 @@ function LandingPage() {
                     >
                       <i className="fa fa-linkedin" />
                     </Button>
-                  </CardFooter>
+                  </CardFooter> */}
                 </Card>
               </Col>
             </Row>

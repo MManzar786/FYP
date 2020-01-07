@@ -50,7 +50,7 @@ class User extends React.Component {
                     <Row>
                       <Col className="pr-1" md="5">
                         <FormGroup>
-                          <label>Company (disabled)</label>
+                          <label>Company</label>
                           <Input
                             defaultValue="Creative Code Inc."
                             disabled
@@ -63,7 +63,7 @@ class User extends React.Component {
                         <FormGroup>
                           <label>Username</label>
                           <Input
-                            defaultValue="michael23"
+                            defaultValue="manzar786"
                             placeholder="Username"
                             type="text"
                           />
@@ -83,7 +83,7 @@ class User extends React.Component {
                         <FormGroup>
                           <label>First Name</label>
                           <Input
-                            defaultValue="Mike"
+                            defaultValue="Manzar"
                             placeholder="Company"
                             type="text"
                           />
@@ -93,7 +93,7 @@ class User extends React.Component {
                         <FormGroup>
                           <label>Last Name</label>
                           <Input
-                            defaultValue="Andrew"
+                            defaultValue="Abbas"
                             placeholder="Last Name"
                             type="text"
                           />
@@ -105,7 +105,7 @@ class User extends React.Component {
                         <FormGroup>
                           <label>Address</label>
                           <Input
-                            defaultValue="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09"
+                            defaultValue="Paksitan"
                             placeholder="Home Address"
                             type="text"
                           />
@@ -117,7 +117,7 @@ class User extends React.Component {
                         <FormGroup>
                           <label>City</label>
                           <Input
-                            defaultValue="Mike"
+                            defaultValue="rwp"
                             placeholder="City"
                             type="text"
                           />
@@ -127,18 +127,18 @@ class User extends React.Component {
                         <FormGroup>
                           <label>Country</label>
                           <Input
-                            defaultValue="Andrew"
+                            defaultValue="pakistan"
                             placeholder="Country"
                             type="text"
                           />
                         </FormGroup>
                       </Col>
-                      <Col className="pl-1" md="4">
+                      {/* <Col className="pl-1" md="4">
                         <FormGroup>
                           <label>Postal Code</label>
                           <Input placeholder="ZIP Code" type="number" />
                         </FormGroup>
-                      </Col>
+                      </Col> */}
                     </Row>
                     <Row>
                       <Col md="12">
@@ -146,8 +146,6 @@ class User extends React.Component {
                           <label>About Me</label>
                           <Input
                             cols="80"
-                            defaultValue="Lamborghini Mercy, Your chick she so thirsty, I'm in
-                            that two seat Lambo."
                             placeholder="Here can be your description"
                             rows="4"
                             type="textarea"
@@ -172,14 +170,12 @@ class User extends React.Component {
                         className="avatar border-gray"
                         src={require("./../assets/img/mike.jpg")}
                       />
-                      <h5 className="title">Mike Andrew</h5>
+                      <h5 className="title">Manzar Abbas</h5>
                     </a>
-                    <p className="description">michael24</p>
+                    <p className="description">manzar786</p>
                   </div>
                   <p className="description text-center">
-                    "Lamborghini Mercy <br />
-                    Your chick she so thirsty <br />
-                    I'm in that two seat Lambo"
+                    Anything discriptive over here
                   </p>
                 </CardBody>
                 <hr />

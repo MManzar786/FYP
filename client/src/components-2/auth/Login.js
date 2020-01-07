@@ -96,6 +96,7 @@ const Login = ({ login, isAuthenticated }) => {
                     </InputGroupAddon>
                     <Input
                       type="password"
+                      required
                       placeholder="Password"
                       name="password"
                       value={password}
