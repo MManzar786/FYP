@@ -17,7 +17,7 @@
 
 */
 import React from "react";
-
+import { Link } from "react-router-dom";
 // reactstrap components
 import { Button, Container } from "reactstrap";
 
@@ -67,7 +67,14 @@ function LandingPageHeader() {
               <i className="fa fa-play" />
               Watch video
             </Button> */}
-            <Button className="btn-round" color="neutral" type="button" outline>
+            <Button
+              className="btn-round"
+              color="neutral"
+              type="button"
+              outline
+              to="/register"
+              tag={Link}
+            >
               Get Started
               <i className="fa fa-chevron-right" />
             </Button>

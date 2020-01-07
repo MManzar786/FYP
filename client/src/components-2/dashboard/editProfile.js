@@ -3,6 +3,7 @@ import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { createProfile, getCurrentProfile } from "../../actions/profile";
+import Navbar from "./../layout/navbar.js";
 import axios from "axios";
 import {
   Button,
@@ -65,6 +66,7 @@ const EditProfile = ({
   };
   return (
     <Fragment>
+      <Navbar />
       <div className="content">
         <Col md="8">
           <Card>

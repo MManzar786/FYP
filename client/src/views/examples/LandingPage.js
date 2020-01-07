@@ -42,6 +42,7 @@ import {
 import ExamplesNavbar from "./../../components/Navbars/ExamplesNavbar.js";
 import LandingPageHeader from "./../../components/Headers/LandingPageHeader.js";
 import DemoFooter from "./../../components/Footers/DemoFooter.js";
+import Navbar from "./../../components-2/layout/navbar.js";
 
 function LandingPage() {
   document.documentElement.classList.remove("nav-open");
@@ -53,7 +54,8 @@ function LandingPage() {
   });
   return (
     <>
-      <ExamplesNavbar />
+      {/* <ExamplesNavbar /> */}
+      <Navbar />
       <LandingPageHeader />
       <div className="main">
         <div className="section text-center">
