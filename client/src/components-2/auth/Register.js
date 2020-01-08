@@ -53,13 +53,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   return (
     <Fragment>
       <Navbar />
-      <div
-        className="page-header"
-        style={{
-          backgroundImage:
-            "url(" + require("./../../assets/img/login-image.jpg") + ")"
-        }}
-      >
+      <div className="page-header" style={{ background: "$white-color" }}>
         <div className="filter" />
         <Container>
           <Row>
@@ -125,6 +119,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                     className="btn btn-primary"
                     value="Register"
                     to="/profile"
+                    onSubmit={e => onSubmit(e)}
                     tag={Link}
                   />
                 </form>

@@ -3,6 +3,7 @@ import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { login } from "../../actions/auth";
+import Navbar from "./../layout/navbar.js";
 
 import {
   Button,
@@ -55,7 +56,8 @@ const Login = ({ login, isAuthenticated }) => {
       <p className="lead">
         <i className="fas fa-user"></i> Sign Into Your Account
       </p> */}
-      <ExamplesNavbar />
+      {/* <ExamplesNavbar /> */}
+      <Navbar />
       <div
         className="page-header"
         style={{
@@ -96,6 +98,7 @@ const Login = ({ login, isAuthenticated }) => {
                     </InputGroupAddon>
                     <Input
                       type="password"
+                      required
                       placeholder="Password"
                       name="password"
                       value={password}

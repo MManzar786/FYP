@@ -2274,7 +2274,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
     display: none; }
   .offline-doc .navbar.navbar-transparent .navbar-brand,
   .offline-doc .navbar.navbar-transparent .collapse .navbar-nav .nav-link {
-    color: #FFFFFF !important; }
+    color:black !important; }
 
 .offline-doc .footer {
   position: absolute;
@@ -3094,16 +3094,13 @@ License - nucleoapp.com/license/
     margin-right: auto;
     margin-left: auto;
     position: absolute; }
-  .navbar.navbar-transparent {
-    background: transparent !important;
-    padding-top: 5px;
-    box-shadow: none; }
+  
     .navbar.navbar-transparent .navbar-brand {
-      color: #FFFFFF; }
+      color: rgb(48, 34, 34); }
     .navbar.navbar-transparent .navbar-nav .nav-item .nav-link {
-      color: #FFFFFF; }
+      color: rgb(48, 34, 34); }
     .navbar.navbar-transparent .navbar-toggler .navbar-toggler-bar {
-      background: #FFFFFF !important; }
+      background: transparent !important; }
   .navbar .logo-container {
     margin-top: 5px; }
     .navbar .logo-container .logo {
@@ -3127,7 +3124,7 @@ License - nucleoapp.com/license/
   .navbar .navbar-toggler .navbar-toggler-icon + .navbar-toggler-icon {
     margin-top: 4px; }
   .navbar .navbar-toggler .navbar-toggler-bar {
-    background: #FFFFFF !important;
+    background:transparent !important;
     display: block;
     position: relative;
     width: 24px;
@@ -3146,7 +3143,7 @@ License - nucleoapp.com/license/
     color: #FFFFFF; }
 
 .navbar-transparent .navbar-nav .nav-item .nav-link:not(.btn), [class*="bg"] .navbar-nav .nav-item .nav-link:not(.btn) {
-  color: #FFFFFF;
+  color: rgb(7, 2, 2);
   border-color: #FFFFFF; }
 
 .navbar-transparent .navbar-nav .active .nav-link
@@ -3159,7 +3156,7 @@ License - nucleoapp.com/license/
 [class*="bg"] .navbar-nav .nav-item .nav-link:hover,
 [class*="bg"] .navbar-nav .nav-item .nav-link:focus {
   background-color: transparent;
-  color: #FFFFFF;
+  color: rgb(10, 3, 3);
   opacity: 1;
   filter: alpha(opacity=100); }
 
@@ -3180,7 +3177,7 @@ License - nucleoapp.com/license/
 [class*="bg"] .navbar-nav .open .nav-link:hover,
 [class*="bg"] .navbar-nav .open .nav-link:focus {
   background-color: transparent;
-  color: #66615B;
+  color: #66615B !important;
   opacity: 1;
   filter: alpha(opacity=100); }
 
@@ -5296,7 +5293,7 @@ License - nucleoapp.com/license/
 
 @media screen and (max-width: 991px) {
   .navbar-collapse {
-    position: fixed;
+    position: absolute;
     display: block !important;
     top: 0;
     height: 100%;
@@ -5330,7 +5327,7 @@ License - nucleoapp.com/license/
       border-bottom: 0; }
     .navbar-collapse .navbar-nav > .nav-item > .nav-link {
       margin: 0px 0px;
-      color: #9A9A9A !important;
+      color: #979797 !important;
       text-transform: uppercase;
       font-weight: 600;
       font-size: 12px;
@@ -6462,5 +6459,6 @@ td.rdtYear:hover {
   top: 1px;
   border-width: 0 .4rem .4rem .4rem;
   border-bottom-color: #fff; }
+ 
 
 /*# sourceMappingURL=paper-kit.css.map */
