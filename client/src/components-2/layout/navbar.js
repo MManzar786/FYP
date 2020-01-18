@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { logout } from "../../actions/auth";
+import logouticon from "./../../assets/img/logout.png";
 
 import {
   UncontrolledCollapse,
+  Button,
   NavbarBrand,
   Navbar,
   NavItem,
@@ -14,44 +16,33 @@ import {
   Container
 } from "reactstrap";
 
+const iconstyle = {
+  height: "20px",
+  widhth: "20px"
+};
+
 const navBar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
-<<<<<<< HEAD
-    <>
+    <Nav>
       <NavItem>
-        <NavLink to="/profile" tag={Link} style={{ color: "black" }}>
-=======
-    <Nav className="ml-auto" navbar>
-      <NavItem>
-        <NavLink to="/profile" tag={Link}>
->>>>>>> d8e3250825527bcaa2c636f0e4a704f2561297c3
-          Profile
-        </NavLink>
-      </NavItem>
-      <NavItem>
-<<<<<<< HEAD
-        <NavLink to="/admin/dashboard" tag={Link} style={{ color: "black" }}>
-=======
         <NavLink to="/admin/dashboard" tag={Link}>
->>>>>>> d8e3250825527bcaa2c636f0e4a704f2561297c3
           Dashboard
         </NavLink>
       </NavItem>
       <NavItem>
-<<<<<<< HEAD
-        <NavLink to="/" tag={Link} style={{ color: "black" }}>
-=======
-        <NavLink onClick={logout} to="/" tag={Link}>
->>>>>>> d8e3250825527bcaa2c636f0e4a704f2561297c3
-          {/* <i aria-hidden={true} className="fa fa-instagram" /> */}
-          Log Out
+        <NavLink>
+          <i className="fas fa-user" aria-hidden={true} />
+          Profile
         </NavLink>
       </NavItem>
-<<<<<<< HEAD
-    </>
-=======
+      <NavItem>
+        <NavLink onClick={logout} to="/" tag={Link}>
+          {/* <i aria-hidden={true} className="fab fa-instagram" /> */}
+          <i className="fas fa-sign-out-alt" aria-hidden={true} />
+          Logout
+        </NavLink>
+      </NavItem>
     </Nav>
->>>>>>> d8e3250825527bcaa2c636f0e4a704f2561297c3
     // <ul>
     //   <li>
     //     <Link to="/profile">
@@ -70,35 +61,22 @@ const navBar = ({ auth: { isAuthenticated, loading }, logout }) => {
     // </ul>
   );
   const guestLinks = (
-<<<<<<< HEAD
-    <>
-      <NavItem>
-        <NavLink to="/login" tag={Link} style={{ color: "black" }}>
-=======
     <Nav className="ml-auto" navbar>
       <NavItem>
         <NavLink to="/login" tag={Link}>
           {/* <i aria-hidden={true} className="fa fa-facebook-official" /> */}
->>>>>>> d8e3250825527bcaa2c636f0e4a704f2561297c3
+          {/* <img src={logouticon} style={iconstyle} /> */}
           Login
         </NavLink>
       </NavItem>
 
       <NavItem>
-<<<<<<< HEAD
-        <NavLink to="/register" tag={Link} style={{ color: "black" }}>
-=======
         <NavLink to="/register" tag={Link}>
->>>>>>> d8e3250825527bcaa2c636f0e4a704f2561297c3
           {/* <i aria-hidden={true} className="fa fa-instagram" /> */}
           register
         </NavLink>
       </NavItem>
-<<<<<<< HEAD
-    </>
-=======
     </Nav>
->>>>>>> d8e3250825527bcaa2c636f0e4a704f2561297c3
 
     // <ul>
     //   <li>

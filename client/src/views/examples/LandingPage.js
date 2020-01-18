@@ -52,6 +52,11 @@ function LandingPage() {
       document.body.classList.remove("profile-page");
     };
   });
+
+  const imagesize = {
+    width: "150px",
+    height: "150px"
+  };
   return (
     <>
       {/* <ExamplesNavbar /> */}
@@ -81,22 +86,6 @@ function LandingPage() {
             <br />
             <Row>
               <Col md="3">
-                {/* <div className="info">
-                  <div className="icon icon-info">
-                    <i className="nc-icon nc-album-2" />
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">Beautiful Gallery</h4>
-                    <p className="description">
-                      Spend your time generating new ideas. You don't have to
-                      think of implementing.
-                    </p>
-                    <Button className="btn-link" color="info" href="#pablo">
-                      See more
-                    </Button>
-                  </div>
-                </div> */}
-
                 <div>
                   <Card>
                     <CardImg
@@ -104,9 +93,10 @@ function LandingPage() {
                       width="100%"
                       src={require("./../../assets/img/k.png")}
                       alt="Card image cap"
+                      style={imagesize}
                     />
                     <CardBody>
-                      <CardTitle>KTech '19</CardTitle>
+                      <CardTitle>KTech '18</CardTitle>
                       <CardSubtitle>
                         Fun Filled Intra University Competiton
                       </CardSubtitle>
@@ -120,21 +110,6 @@ function LandingPage() {
                 </div>
               </Col>
               <Col md="3">
-                {/* <div className="info">
-                  <div className="icon icon-info">
-                    <i className="nc-icon nc-bulb-63" />
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">New Ideas</h4>
-                    <p>
-                      Larger, yet dramatically thinner. More powerful, but
-                      remarkably power efficient.
-                    </p>
-                    <Button className="btn-link" color="info" href="#pablo">
-                      See more
-                    </Button>
-                  </div>
-                </div> */}
                 <div>
                   <Card>
                     <CardImg
@@ -142,6 +117,7 @@ function LandingPage() {
                       width="100%"
                       src={require("./../../assets/img/k.png")}
                       alt="Card image cap"
+                      style={imagesize}
                     />
                     <CardBody>
                       <CardTitle>KTech '19</CardTitle>
@@ -155,83 +131,6 @@ function LandingPage() {
                       <Button>See More</Button>
                     </CardBody>
                   </Card>
-                </div>
-              </Col>
-              <Col md="3">
-                {/* <div className="info">
-                  <div className="icon icon-info">
-                    <i className="nc-icon nc-chart-bar-32" />
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">Statistics</h4>
-                    <p>
-                      Choose from a veriety of many colors resembling sugar
-                      paper pastels.
-                    </p>
-                    <Button className="btn-link" color="info" href="#pablo">
-                      See more
-                    </Button>
-                  </div>
-                </div> */}
-                <div>
-                  {/* <Card>
-                    <CardImg
-                      top
-                      width="100%"
-                      src={require("./../../assets/img/k.png")}
-                      alt="Card image cap"
-                    />
-                    <CardBody>
-                      <CardTitle>KTech '19</CardTitle>
-                      <CardSubtitle>
-                        Fun Filled Intra University Competiton
-                      </CardSubtitle>
-                      <CardText>
-                        Some quick example text to build on the card title and
-                        make up the bulk of the card's content.
-                      </CardText>
-                      <Button>See More</Button>
-                    </CardBody>
-                  </Card> */}
-                </div>
-              </Col>
-              <Col md="3">
-                {/* <div className="info">
-                  <div className="icon icon-info">
-                    <i className="nc-icon nc-sun-fog-29" />
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">Delightful design</h4>
-                    <p>
-                      Find unique and handmade delightful designs related items
-                      directly from our sellers.
-                    </p>
-                    <Button className="btn-link" color="info" href="#pablo">
-                      See more
-                    </Button>
-                  </div>
-                </div> */}
-
-                <div>
-                  {/* <Card>
-                    <CardImg
-                      top
-                      width="100%"
-                      src={require("./../../assets/img/k.png")}
-                      alt="Card image cap"
-                    />
-                    <CardBody>
-                      <CardTitle>KTech '19</CardTitle>
-                      <CardSubtitle>
-                        Fun Filled Intra University Competiton
-                      </CardSubtitle>
-                      <CardText>
-                        Some quick example text to build on the card title and
-                        make up the bulk of the card's content.
-                      </CardText>
-                      <Button>See More</Button>
-                    </CardBody>
-                  </Card> */}
                 </div>
               </Col>
             </Row>

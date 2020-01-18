@@ -19,6 +19,7 @@
 import React from "react";
 // nodejs library that concatenates strings
 import classnames from "classnames";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // reactstrap components
 import {
   Button,
@@ -98,7 +99,8 @@ function IndexNavbar() {
                 target="_blank"
                 title="Follow us on Twitter"
               >
-                <i className="fa fa-twitter" />
+                <i class="fab fa-twitter" />
+
                 <p className="d-lg-none">Twitter</p>
               </NavLink>
             </NavItem>

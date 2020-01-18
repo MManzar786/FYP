@@ -76,15 +76,11 @@ const App = () => {
             <Route path="/index" render={props => <Index {...props} />} />
             <Route path="/admin" render={props => <AdminLayout {...props} />} />
             {/* <Redirect to="/admin/dashboard" /> */}
-            <Route
-              path="/nucleo-icons"
-              render={props => <NucleoIcons {...props} />}
-            />
 
-            {/* <Route
+            <Route
               path="/profile-page"
               render={props => <ProfilePage {...props} />}
-            /> */}
+            />
             {/* <Route
               path="/register-page"
               render={props => <RegisterPage {...props} />}

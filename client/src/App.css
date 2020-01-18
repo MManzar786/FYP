@@ -31,3 +31,10 @@
   top: 0px;
   z-index: 10;
 }
+
+.input-group-append .input-group-text,
+.input-group-prepend .input-group-text {
+  border-radius: 2px !important;
+  margin-right: -3px !important;
+  padding: 10px 3px 10px 7px !important;
+}

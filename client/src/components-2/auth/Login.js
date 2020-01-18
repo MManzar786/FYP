@@ -15,7 +15,9 @@ import {
   InputGroup,
   Container,
   Row,
-  Col
+  Col,
+  Alert,
+  CardBody
 } from "reactstrap";
 
 // core components
@@ -50,6 +52,14 @@ const Login = ({ login, isAuthenticated }) => {
   if (isAuthenticated) {
     return <Redirect to="/profile" />;
   }
+
+  const buttonstyle = {
+    fontSize: "25px",
+    padding: "1px 1px",
+    backgroundColor: "transparent",
+    color: "white",
+    marginTop: "-20%"
+  };
   return (
     <Fragment>
       {/* <h1 className="large text-primary">Sign In</h1>
@@ -70,51 +80,79 @@ const Login = ({ login, isAuthenticated }) => {
           <Row>
             <Col className="ml-auto mr-auto" lg="6">
               <Card className="card-register ml-auto mr-auto">
-                <h3 className="title mx-auto">LOG IN</h3>
-                <Form className="register-form" onSubmit={e => onSubmit(e)}>
-                  <label>CNIC</label>
-                  <InputGroup>
-                    <InputGroupAddon addonType="prepend">
-                      <InputGroupText>
-                        <i className="nc-icon nc-paper" />
-                      </InputGroupText>
-                    </InputGroupAddon>
-                    <Input
-                      type="text"
-                      placeholder="CNIC"
-                      name="cnic"
-                      value={cnic}
-                      onChange={e => onChange(e)}
-                    />
-                  </InputGroup>
+                <CardBody>
+                  <h3 className="title mx-auto text-center">LOG IN</h3>
+                  <div className="button-container text-center">
+                    <Button
+                      className="btn-neutral btn-icon btn-round"
+                      color="default"
+                      style={buttonstyle}
+                      onClick={e => {
+                        e.preventDefault();
+                      }}
+                      size="lg"
+                    >
+                      <i className="fab fa-facebook-f" />
+                    </Button>
+                    <Button
+                      className="btn-neutral btn-icon btn-round"
+                      color="default"
+                      style={buttonstyle}
+                      onClick={e => {
+                        e.preventDefault();
+                        window.location.href =
+                          "http://localhost:5000/auth/linkedin";
+                      }}
+                      size="lg"
+                    >
+                      <i className="fab fa-linkedin" />
+                    </Button>
+                  </div>
+                  <Form className="register-form" onSubmit={e => onSubmit(e)}>
+                    {/* <label>CNIC</label> */}
+                    <InputGroup>
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <i className="nc-icon nc-paper" />
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input
+                        type="text"
+                        placeholder="CNIC"
+                        name="cnic"
+                        value={cnic}
+                        onChange={e => onChange(e)}
+                      />
+                    </InputGroup>
 
-                  {/* <Input placeholder="Email" type="text" name="email" value={email} onChange={e => onChange(e)} /> */}
-                  <label>Password</label>
-                  <InputGroup>
-                    <InputGroupAddon addonType="prepend">
-                      <InputGroupText>
-                        <i className="nc-icon nc-key-25" />
-                      </InputGroupText>
-                    </InputGroupAddon>
-                    <Input
-                      type="password"
-                      required
-                      placeholder="Password"
-                      name="password"
-                      value={password}
-                      onChange={e => onChange(e)}
-                    />
-                  </InputGroup>
+                    {/* <Input placeholder="Email" type="text" name="email" value={email} onChange={e => onChange(e)} /> */}
+                    {/* <label>Password</label> */}
+                    <InputGroup>
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <i className="nc-icon nc-key-25" />
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input
+                        type="password"
+                        required
+                        placeholder="Password"
+                        name="password"
+                        value={password}
+                        onChange={e => onChange(e)}
+                      />
+                    </InputGroup>
 
-                  <Button
-                    block
-                    className="btn-round"
-                    color="danger"
-                    type="submit"
-                  >
-                    Log In
-                  </Button>
-                </Form>
+                    <Button
+                      block
+                      className="btn-round"
+                      color="danger"
+                      type="submit"
+                    >
+                      Log In
+                    </Button>
+                  </Form>
+                </CardBody>
               </Card>
             </Col>
           </Row>

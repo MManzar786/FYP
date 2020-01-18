@@ -843,7 +843,7 @@ fieldset[disabled]
     .form-control:focus ~ .input-group-append .input-group-text,
     .form-control:focus + .input-group-prepend .input-group-text,
     .form-control:focus ~ .input-group-prepend .input-group-text {
-      border: 1px solid #f96332;
+      /* border: 1px solid #f96332; */
       border-left: none;
       background-color: transparent; }
   .has-success .form-control,
@@ -995,7 +995,7 @@ fieldset[disabled]
 .form-group .input-group-append .input-group-text,
 .input-group .input-group-prepend .input-group-text,
 .input-group .input-group-append .input-group-text {
-  padding: 10px 0 10px 18px; }
+  padding: 10px 0px 10px 7px !important; }
   .form-group .input-group-prepend .input-group-text + .form-control,
   .form-group .input-group-prepend .input-group-text ~ .form-control,
   .form-group .input-group-append .input-group-text + .form-control,
@@ -1056,7 +1056,7 @@ fieldset[disabled]
 .input-group-prepend .input-group-text {
   background-color: transparent;
   border: 1px solid #E3E3E3;
-  border-radius: 30px;
+  /* border-radius: 30px; */
   color: #888;
   -webkit-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   -moz-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
