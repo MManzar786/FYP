@@ -16,7 +16,9 @@ import Alert from "./components-2/layout/alert";
 import Profile from "./components-2/dashboard/profile";
 import CreateProfile from "./components-2/dashboard/createProfile";
 import EditProfile from "./components-2/dashboard/editProfile";
+import Search from "./components-2/dashboard/search";
 import PrivateRoute from "./components-2/routing/PrivateRoute";
+
 //styles
 // import "./assets/css/bootstrap.min.css";
 // import "./assets/demo/demo.css";
@@ -101,6 +103,7 @@ const App = () => {
               component={CreateProfile}
             />
             <PrivateRoute exact path="/edit-profile" component={EditProfile} />
+            <PrivateRoute exact path="/search" component={Search} />
 
             <PrivateRoute exact path="/profile" component={Profile} />
           </Switch>
