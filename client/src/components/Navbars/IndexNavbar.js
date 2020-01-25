@@ -19,7 +19,7 @@
 import React from "react";
 // nodejs library that concatenates strings
 import classnames from "classnames";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // reactstrap components
 import {
   Button,

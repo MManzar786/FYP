@@ -5,6 +5,7 @@ const cors = require("cors");
 const signupController = require("./controllers/signupController");
 const userRouter = require("./routes/users");
 const authRouter = require("./routes/auth");
+const searchRouter = require("./routes/search");
 const profileRouter = require("./routes/profile");
 const linkedInRouter = require("./routes/linkedin-auth");
 const passportSetup = require("./config/passport-setup");
@@ -26,6 +27,7 @@ app.use(cors());
 app.options("*", cors());
 app.use(userRouter);
 app.use(authRouter);
+app.use(searchRouter);
 app.use(profileRouter);
 app.use("/auth", linkedInRouter);
 
