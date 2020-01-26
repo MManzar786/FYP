@@ -30,7 +30,7 @@ const navBar = ({ auth: { isAuthenticated, loading }, logout }) => {
         </NavLink>
       </NavItem>
       <NavItem>
-        <NavLink>
+        <NavLink to="/profilepage" tag={Link}>
           <i className="fas fa-user" aria-hidden={true} />
           Profile
         </NavLink>

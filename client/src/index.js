@@ -9,7 +9,7 @@ import "./assets/css/bootstrap.min.css";
 // import "./assets/demo/demo.css";
 
 import "perfect-scrollbar/css/perfect-scrollbar.css";
-import "./assets/scss/now-ui-dashboard.scss?v1.2.0";
+
 import "./assets/scss/paper-kit.scss";
 // import "./assets/scss/paper-dashboard.scss?v=1.1.0";
 

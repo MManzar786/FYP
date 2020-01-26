@@ -14,106 +14,85 @@ import {
   Row,
   Col
 } from "reactstrap";
-import ExamplesNavbar from "./../../components/Navbars/ExamplesNavbar.js";
-// import IndexHeader from "./../components/Headers/IndexHeader.js";
-import DemoFooter from "./../../components/Footers/DemoFooter.js";
 
+import DemoFooter from "./../../components/Footers/DemoFooter.js";
+import Navbar from "./../layout/navbar.js";
+const widthstyle = {
+  left: "0",
+  right: "0",
+  position: "absolute"
+};
 function ContactHeader() {
   return (
     <>
-      <ExamplesNavbar />
+      <Navbar />
       <div
-        className="page-header section-dark"
+        className="page-header "
         style={{
-          backgroundImage:
-            "url(" + require("./../../assets/img/antoine-barres.jpg") + ")"
+          backgroundColor: "white !important"
         }}
       >
-        {/* <div className="filter" /> */}
-        <div className="content-center">
-          <Container>
-            <div className="title-brand">
-              <h1 className="presentation-title">Get In Touch</h1>
-              <div className="fog-low">
-                <img
-                  alt="..."
-                  src={require("./../../assets/img/fog-low.png")}
-                />
-              </div>
-              <div className="fog-low right">
-                <img
-                  alt="..."
-                  src={require("./../../assets/img/fog-low.png")}
-                />
-              </div>
-            </div>
-            {/* </div> */}
-            {/* <h2 className="presentation-subtitle text-center">Get In Touch</h2> */}
-          </Container>
-        </div>
-        <div
-          className="moving-clouds"
-          style={{
-            backgroundImage:
-              "url(" + require("./../../assets/img/clouds.png") + ")"
-          }}
-        />
-        <div className="landing-section">
+        <div className="main">
+          {/* <div className="section landing-section"> */}
           <Container>
             <Row>
-              <Col className="ml-auto mr-auto" md="12">
-                <Card className="card-register ml-auto mr-auto">
-                  {/* <h2 className="text-center">Keep in touch?</h2> */}
-                  <Form className="contact-form">
-                    <Row>
-                      <Col xs="auto">
-                        <label>Name</label>
-                        <InputGroup>
-                          <InputGroupAddon addonType="prepend">
-                            <InputGroupText>
-                              <i className="nc-icon nc-single-02" />
-                            </InputGroupText>
-                          </InputGroupAddon>
-                          <Input placeholder="Name" type="text" />
-                        </InputGroup>
-                      </Col>
-                      <Col xs="auto">
-                        <label>Email</label>
-                        <InputGroup>
-                          <InputGroupAddon addonType="prepend">
-                            <InputGroupText>
-                              <i className="nc-icon nc-email-85" />
-                            </InputGroupText>
-                          </InputGroupAddon>
-                          <Input placeholder="Email" type="text" />
-                        </InputGroup>
-                      </Col>
-                    </Row>
-                    <label>Message</label>
-                    <Input
-                      placeholder="Tell us your thoughts and feelings..."
-                      type="textarea"
-                      rows="4"
-                    />
-                    <Row>
-                      <Col className="ml-auto mr-auto" md="4">
-                        <Button className="btn-fill" color="danger" size="lg">
-                          Send Message
-                        </Button>
-                      </Col>
-                    </Row>
-                  </Form>
-                </Card>
+              <Col className="ml-auto mr-auto" lg="12">
+                <h2
+                  className="text-center"
+                  style={{ color: "black", fontWeight: "600" }}
+                >
+                  Keep in touch?
+                </h2>
+                <Form className="contact-form">
+                  <Row>
+                    <Col md="6">
+                      <InputGroup>
+                        <InputGroupAddon addonType="prepend">
+                          <InputGroupText>
+                            <i className="nc-icon nc-single-02" />
+                          </InputGroupText>
+                        </InputGroupAddon>
+                        <Input size="25" placeholder="Name" type="text" />
+                      </InputGroup>
+                    </Col>
+
+                    <Col md="6">
+                      <InputGroup>
+                        <InputGroupAddon addonType="prepend">
+                          <InputGroupText>
+                            <i className="nc-icon nc-email-85" />
+                          </InputGroupText>
+                        </InputGroupAddon>
+                        <Input size="25" placeholder="Email" type="text" />
+                      </InputGroup>
+                    </Col>
+                  </Row>
+                  <label>Message</label>
+                  <Input
+                    placeholder="Tell us your thoughts and feelings..."
+                    type="textarea"
+                    rows="4"
+                  />
+                  <Row>
+                    <Col className="ml-auto mr-auto" md="4">
+                      <Button className="btn-fill" color="danger" size="lg">
+                        Send Message
+                      </Button>
+                    </Col>
+                  </Row>
+                </Form>
               </Col>
             </Row>
           </Container>
         </div>
-      </div>
-      <div className="footer register-footer text-center">
-        <h6>
-          © {new Date().getFullYear()}, made with{" "}
-          <i className="fa fa-heart heart" />
-        </h6>
+        {/* </div> */}
+
+        <div className="footer register-footer text-center">
+          <h6>
+            © {new Date().getFullYear()}, made with{" "}
+            <i className="fa fa-heart heart" />
+          </h6>
+        </div>
       </div>
     </>
   );
