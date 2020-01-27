@@ -22,13 +22,15 @@ passport.use(
         // represent the logged-in user. In a typical application, you would want
         // to associate the LinkedIn account with a user record in your database,
         // and return that user instead.
-        // console.log("redirect URI calleds");
-        console.log(profile.email);
-        console.log(profile.displayName);
+        console.log("redirect URI calleds");
+        console.log(profile);
 
-        // console.log(accessToken);
-        console.log(profile.id);
-        console.log(profile.photos[0].value);
+        // console.log(profile.email);
+        // console.log(profile.displayName);
+
+        // // console.log(accessToken);
+        // console.log(profile.id);
+        // console.log(profile.photos[0].value);
         return done(null, profile);
       });
     }

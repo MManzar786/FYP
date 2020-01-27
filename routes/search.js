@@ -6,11 +6,11 @@ function escapeRegex(text) {
   return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
 }
 
-router.get("/search", async (req, res) => {
+router.post("/search", async (req, res) => {
   try {
     // console.log(req.query.search);
-    if (req.query.search) {
-      const regex = new RegExp(escapeRegex(req.query.search), "gi");
+    if (req.body.query) {
+      const regex = new RegExp(escapeRegex(req.body.query), "gi");
       Profile.find({ name: regex }, function(err, foundprofiles) {
         if (err) {
           console.log(err);

@@ -2,15 +2,51 @@ import React, { Component } from "react";
 import axios from "axios";
 
 class Search extends Component {
-  async componentDidMount() {
-    const res = await axios.get("/search?search=manzar");
-    // here your res for search
+  constructor(props) {
+    super(props);
+    this.state = {
+      query: "",
+      result: []
+    };
   }
+
+  // async componentDidMount() {
+  // const res = await axios.get("/search");
+  // here your res for search
+  // }
+
+  handleSearch = async e => {
+    e.preventDefault();
+    const res = await axios.post("/search", { query: this.state.query });
+    this.setState({ result: res.data });
+    console.log(res.data);
+  };
+
+  handleInput = e => {
+    this.setState({ query: e.target.value });
+  };
 
   render() {
     return (
       <div>
-        <h1>Hello World</h1>
+        <form onSubmit={this.handleSearch}>
+          <input
+            onChange={e => this.handleInput(e)}
+            name="search"
+            type="text"
+          />
+          <input type="submit" value="Search" name="search" />
+        </form>
+        <div>
+          {this.state.result.map(d => {
+            return (
+              <div>
+                <p>{d.name}</p>
+                <p>{d.emailId}</p>
+              </div>
+            );
+          })}
+        </div>
       </div>
     );
   }
