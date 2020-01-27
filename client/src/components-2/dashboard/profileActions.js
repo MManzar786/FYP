@@ -119,20 +119,7 @@ const ProfilePage = ({
             </Row>
           </div>
           <br />
-          <Row>
-            <Col></Col>
-            <Col>
-              <Button
-                to="/search"
-                tag={Link}
-                className="btn-round text-center"
-                color="warning"
-              >
-                Find Alumni
-              </Button>
-            </Col>
-            <Col></Col>
-          </Row>
+          
         </Container>
       </div>
     </Fragment>
