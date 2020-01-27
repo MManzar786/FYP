@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import SideBar from "./Sidebar";
+import DemoFooter from "./../../components/Footers/DemoFooter.js";
+
 export default class Content extends Component {
   render() {
     const spacing = {
@@ -28,6 +30,7 @@ export default class Content extends Component {
               </div>
             </div>
           </section>
+          <DemoFooter />
         </div>
       </React.Fragment>
     );

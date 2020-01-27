@@ -5,6 +5,11 @@ import Spinner from "../layout/spinner";
 import PostItem from "./PostItem";
 import PostForm from "./PostForm";
 import { getPosts } from "../../actions/post";
+// import { Navbar } from "reactstrap";
+import Navbar from "./../layout/navbar.js";
+import DemoFooter from "../../components/Footers/DemoFooter.js";
+
+import ProfilePageHeader from "../../components/Headers/ProfilePageHeader";
 
 const Posts = ({ getPosts, post: { posts, loading } }) => {
   useEffect(() => {
@@ -14,13 +19,18 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
     <Spinner />
   ) : (
     <Fragment>
-      <h1>Jobs By Alumni's</h1>
+      <Navbar />
+      <ProfilePageHeader />
+      <div className="text-center">
+        <h1>Jobs By Alumni's</h1>
+      </div>
       <PostForm />
       <div>
         {posts.map(post => (
           <PostItem key={post._id} post={post} />
         ))}
       </div>
+      <DemoFooter />
     </Fragment>
   );
 };

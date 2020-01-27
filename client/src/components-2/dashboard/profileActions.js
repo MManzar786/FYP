@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { createProfile, getCurrentProfile } from "../../actions/profile";
 import Navbar from "./../layout/navbar.js";
 import ProfilePageHeader from "./../../components/Headers/ProfilePageHeader.js";
+import DemoFooter from "./../../components/Footers/DemoFooter.js";
 
 import axios from "axios";
 import {
@@ -119,7 +120,39 @@ const ProfilePage = ({
             </Row>
           </div>
           <br />
-          
+          <Row>
+            <Col>
+              <Button
+                to="/search"
+                tag={Link}
+                className="btn-round ml-2 mr-2"
+                color="warning"
+              >
+                Find Alumni
+              </Button>
+            </Col>
+            <Col>
+              <Button
+                to="/edit-profile"
+                tag={Link}
+                className="btn-round ml-2 mr-2"
+                color="success"
+              >
+                Edit Profile
+              </Button>
+            </Col>
+            <Col>
+              {" "}
+              <Button
+                to="/jobs"
+                tag={Link}
+                className="btn-round ml-2 mr-2"
+                color="success"
+              >
+                Post Job
+              </Button>
+            </Col>
+          </Row>
         </Container>
       </div>
     </Fragment>

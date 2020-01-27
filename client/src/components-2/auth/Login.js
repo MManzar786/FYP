@@ -22,6 +22,7 @@ import {
 
 // core components
 import ExamplesNavbar from "./../../components/Navbars/ExamplesNavbar.js";
+import DemoFooter from "./../../components/Footers/DemoFooter.js";
 
 // function RegisterPage() {
 
@@ -209,6 +210,7 @@ const Login = ({ login, isAuthenticated }) => {
       <p className="my-1">
         No account? <Link to="/register">Sign Up</Link>
       </p> */}
+      <DemoFooter />
     </Fragment>
   );
 };

@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Link, Redirect } from "react-router-dom";
 import { setAlert } from "../../actions/alert";
 import { register } from "../../actions/auth";
+
 import PropTypes from "prop-types";
 import {
   Button,
@@ -18,6 +19,7 @@ import {
 } from "reactstrap";
 import ExamplesNavbar from "./../../components/Navbars/ExamplesNavbar.js";
 import Navbar from "./../layout/navbar.js";
+import DemoFooter from "./../../components/Footers/DemoFooter.js";
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -137,6 +139,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           </Row>
         </Container>
       </div>
+      <DemoFooter />
     </Fragment>
   );
 };

@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { createProfile, getCurrentProfile } from "../../actions/profile";
 import Navbar from "./../layout/navbar.js";
+import DemoFooter from "./../../components/Footers/DemoFooter.js";
+
 import axios from "axios";
 import {
   Button,
@@ -329,7 +331,7 @@ const EditProfile = ({
                     <p>{emailId}</p>
                     <Row>
                       <Col>
-                        <small>Job Status:</small>
+                        <small>Job Title:</small>
                         <p>{jobStatus}</p>
                       </Col>
                       <Col>
@@ -374,6 +376,7 @@ const EditProfile = ({
           </Container>
         </div>
       </div>
+      <DemoFooter />
     </Fragment>
   );
 };

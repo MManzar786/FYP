@@ -21,6 +21,7 @@ import Navbar from "./../layout/navbar.js";
 // core components
 import ExamplesNavbar from "./../../components/Navbars/ExamplesNavbar.js";
 import LandingPageHeader from "./../../components/Headers/LandingPageHeader.js";
+import DemoFooter from "./../../components/Footers/DemoFooter.js";
 
 let redirect = () => {
   window.location.href = "http://localhost:5000/auth/linkedin";
@@ -117,6 +118,7 @@ const Profile = ({
           </div>
         </Fragment>
       )}
+      <DemoFooter />
     </Fragment>
   );
 };

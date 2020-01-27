@@ -35,6 +35,7 @@
     "react-datetime": "^2.16.3",
     "react-dom": "^16.12.0",
     "react-google-maps": "^9.4.5",
+    "react-moment": "^0.9.7",
     "react-notification-alert": "0.0.12",
     "reactstrap": "^8.2.0",
     "uuid": "^3.3.3"

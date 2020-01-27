@@ -5,6 +5,8 @@ import { connect } from "react-redux";
 import { createProfile } from "../../actions/profile";
 import axios from "axios";
 import Navbar from "./../layout/navbar.js";
+import DemoFooter from "./../../components/Footers/DemoFooter.js";
+
 import {
   Button,
   Card,
@@ -359,6 +361,7 @@ const CreateProfile = ({ createProfile, history }) => {
       </form> */}
         </div>
       </div>
+      <DemoFooter />
     </Fragment>
   );
 };
