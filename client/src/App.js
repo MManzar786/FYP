@@ -5,6 +5,7 @@ import {
   Redirect,
   Switch
 } from "react-router-dom";
+import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 import "./App.css";
 
 import Navbar from "./components-2/layout/navbar";
@@ -30,17 +31,17 @@ import Index from "./views/Index.js";
 import NucleoIcons from "./views/NucleoIcons.js";
 import LandingPage from "./views/examples/LandingPage.js";
 import ProfilePage from "./views/examples/ProfilePage.js";
+import ProfileActions from "./components-2/dashboard/profileActions.js";
 import RegisterPage from "./views/examples/RegisterPage.js";
 import ContactPage from "./components-2/layout/ContactUs.js";
 // others
 
 //dashboard
-import Dashboard from "./views/Dashboard.jsx";
 import { createBrowserHistory } from "history";
+import Dashboard from "./components/Dashboard/homepage-dashboard";
 // import "./assets/scss/paper-dashboard.scss?v=1.1.0";
 // //import "./assets/demo/demo.css";
 // import "perfect-scrollbar/css/perfect-scrollbar.css";
-import AdminLayout from "./layouts/Admin.jsx";
 
 //redux
 import { Provider } from "react-redux";
@@ -78,8 +79,11 @@ const App = () => {
             />
 
             <Route path="/index" render={props => <Index {...props} />} />
-            <Route path="/admin" render={props => <AdminLayout {...props} />} />
             {/* <Redirect to="/admin/dashboard" /> */}
+            <Route
+              path="/admin/dashboard"
+              render={props => <Dashboard {...props} />}
+            />
 
             <Route
               path="/profile-page"
@@ -106,7 +110,11 @@ const App = () => {
             />
             <PrivateRoute exact path="/edit-profile" component={EditProfile} />
             <PrivateRoute exact path="/search" component={Search} />
-
+            <PrivateRoute
+              exact
+              path="/profilepage"
+              component={ProfileActions}
+            />
             <PrivateRoute exact path="/profile" component={Profile} />
             <PrivateRoute exact path="/jobs" component={Posts} />
             <PrivateRoute exact path="/jobs/:id" component={Post} />

@@ -145,3 +145,9 @@ button {
   font-size: 0.8rem;
   margin-bottom: 0.5rem;
 }
+
+.navbar .navbar-brand {
+  color: white !important;
+  font-weight: 600;
+  font-size: 18px;
+}

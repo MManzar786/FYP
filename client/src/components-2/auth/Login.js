@@ -56,9 +56,23 @@ const Login = ({ login, isAuthenticated }) => {
   const buttonstyle = {
     fontSize: "25px",
     padding: "1px 1px",
+    border: "none",
     backgroundColor: "transparent",
     color: "white",
     marginTop: "-20%"
+  };
+
+  const buttonstyle1 = {
+    fontSize: "30px",
+    padding: "1px 1px",
+    backgroundColor: "transparent",
+    color: "white",
+    border: "none",
+    marginTop: "-20%"
+  };
+
+  const inputstyle = {
+    borderRadius: "4px"
   };
   return (
     <Fragment>
@@ -84,7 +98,7 @@ const Login = ({ login, isAuthenticated }) => {
                   <h3 className="title mx-auto text-center">LOG IN</h3>
                   <div className="button-container text-center">
                     <Button
-                      className="btn-neutral btn-icon btn-round"
+                      className="btn-neutral btn-icon btn-round ml-2 mr-2"
                       color="default"
                       style={buttonstyle}
                       onClick={e => {
@@ -95,14 +109,14 @@ const Login = ({ login, isAuthenticated }) => {
                       <i className="fab fa-facebook-f" />
                     </Button>
                     <Button
-                      className="btn-neutral btn-icon btn-round"
+                      className="btn-neutral btn-icon btn-round ml-2 mr-2"
                       color="default"
-                      style={buttonstyle}
                       onClick={e => {
                         e.preventDefault();
                         window.location.href =
                           "http://localhost:5000/auth/linkedin";
                       }}
+                      style={buttonstyle1}
                       size="lg"
                     >
                       <i className="fab fa-linkedin" />
@@ -119,11 +133,13 @@ const Login = ({ login, isAuthenticated }) => {
                       <Input
                         type="text"
                         placeholder="CNIC"
+                        required
                         name="cnic"
                         value={cnic}
                         onChange={e => onChange(e)}
                       />
                     </InputGroup>
+                    <br />
 
                     {/* <Input placeholder="Email" type="text" name="email" value={email} onChange={e => onChange(e)} /> */}
                     {/* <label>Password</label> */}
@@ -152,6 +168,12 @@ const Login = ({ login, isAuthenticated }) => {
                       Log In
                     </Button>
                   </Form>
+                  <br />
+                  <p>
+                    {" "}
+                    Don't Have an Account yet?
+                    <a>Register!</a>
+                  </p>
                 </CardBody>
               </Card>
             </Col>

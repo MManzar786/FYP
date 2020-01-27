@@ -89,8 +89,15 @@ const EditProfile = ({
     borderBottomRightRadius: "50%",
     borderTopLeftRadius: "50%",
     borderTopRightRadius: "50%",
-    marginLeft: "50%"
+    position: "relative",
+    marginLeft: "60%",
+    marginTop: "-80%"
   };
+
+  const cardstyle = {
+    marginTop: "15%"
+  };
+
   return (
     <Fragment>
       <Navbar />
@@ -104,7 +111,7 @@ const EditProfile = ({
         <div className="content">
           <Container>
             {/* <Row> </Row> */}
-            <Row>
+            <Row style={cardstyle}>
               <Col className="ml-auto mt-auto" md="8">
                 <Card>
                   <CardHeader>
@@ -230,7 +237,7 @@ const EditProfile = ({
                         {/* <div className="form-group"> */}
                         <Col className="px-1" md="3">
                           <FormGroup>
-                            <label>Job Status</label>
+                            <label>Job Title</label>
                             <input
                               type="text"
                               size="30"
@@ -306,23 +313,30 @@ const EditProfile = ({
                           src={require("./../../assets/img/mike.jpg")}
                           style={dpstyle}
                         />
-                        <h3
-                          className="title text-center"
-                          style={{ color: "black" }}
-                        >
-                          Manzar Abbas
-                        </h3>
                       </a>
-                      <p className="description" style={{ color: "black" }}>
-                        manzar786
-                      </p>
                     </div>
-                    <p
-                      className="description text-center"
-                      style={{ color: "black" }}
-                    >
-                      Anything discriptive over here
-                    </p>
+                    <Row>
+                      <small>Name:</small>
+                      <Col md={6}>
+                        <p>{name}</p>
+                      </Col>
+                      <small>Section : </small>
+                      <Col md={3}>
+                        <p>{degree}</p>
+                      </Col>
+                    </Row>
+                    <small>Email:</small>
+                    <p>{emailId}</p>
+                    <Row>
+                      <Col>
+                        <small>Job Status:</small>
+                        <p>{jobStatus}</p>
+                      </Col>
+                      <Col>
+                        <small>Passing Year:</small>
+                        <p>{passingYear}</p>
+                      </Col>
+                    </Row>
                     <hr />
                     <div className="button-container">
                       <Button

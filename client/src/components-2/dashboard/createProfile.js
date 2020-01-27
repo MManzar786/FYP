@@ -200,7 +200,7 @@ const CreateProfile = ({ createProfile, history }) => {
                         {/* <div className="form-group"> */}
                         <Col className="px-1" md="3">
                           <FormGroup>
-                            <label>Job Status</label>
+                            <label>Job Title</label>
                             <input
                               type="text"
                               size="30"

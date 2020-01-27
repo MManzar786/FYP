@@ -53,7 +53,13 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   return (
     <Fragment>
       <Navbar />
-      <div className="page-header" style={{ background: "$white-color" }}>
+      <div
+        className="page-header"
+        style={{
+          backgroundImage:
+            "url(" + require("./../../assets/img/login-image.jpg") + ")"
+        }}
+      >
         <div className="filter" />
         <Container>
           <Row>
