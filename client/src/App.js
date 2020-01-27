@@ -14,6 +14,8 @@ import Register from "./components-2/auth/Register";
 import Login from "./components-2/auth/Login";
 import Alert from "./components-2/layout/alert";
 import Profile from "./components-2/dashboard/profile";
+import Posts from "./components-2/posts/Posts";
+import Post from "./components-2/post/Post";
 import CreateProfile from "./components-2/dashboard/createProfile";
 import EditProfile from "./components-2/dashboard/editProfile";
 import Search from "./components-2/dashboard/search";
@@ -106,6 +108,8 @@ const App = () => {
             <PrivateRoute exact path="/search" component={Search} />
 
             <PrivateRoute exact path="/profile" component={Profile} />
+            <PrivateRoute exact path="/jobs" component={Posts} />
+            <PrivateRoute exact path="/jobs/:id" component={Post} />
           </Switch>
         </Fragment>
       </Router>

@@ -20,6 +20,79 @@
 .App-link {
   color: #09d3ac;
 }
+.btn-white,
+.bg-white,
+.badge-white,
+.alert-white {
+  background: #fff;
+  color: #333;
+  border: #ccc solid 1px;
+}
+.post-formm .post-formm-header {
+  background: var(--primary-color);
+  padding: 0.5rem;
+}
+/* Forms */
+.formm .formm-group {
+  margin: 1.2rem 0;
+}
+.my-11 {
+  margin: 1rem 0;
+}
+.formm .formm-text {
+  display: block;
+  margin-top: 0.3rem;
+  color: #888;
+}
+.round-imgg {
+  border-radius: 50%;
+}
+
+.formm input[type="text"],
+.formm input[type="email"],
+.formm input[type="password"],
+.formm input[type="date"],
+.formm select,
+.formm textarea {
+  display: block;
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+}
+
+.formm input[type="submit"],
+button {
+  font: inherit;
+}
+
+.formm .social-input {
+  display: flex;
+}
+
+.formm .social-input i {
+  padding: 0.5rem;
+  width: 4rem;
+}
+
+.formm .social-input i.fa-twitter {
+  color: #38a1f3;
+}
+.formm .social-input i.fa-facebook {
+  color: #3b5998;
+}
+.formm .social-input i.fa-instagram {
+  color: #3f729b;
+}
+.formm .social-input i.fa-youtube {
+  color: #c4302b;
+}
+.formm .social-input i.fa-linkedin {
+  color: #0077b5;
+}
+.btn:hover {
+  opacity: 0.8;
+}
 .navbar-transparent {
   background-color: transparent !important;
   padding-top: 5px;
@@ -37,4 +110,38 @@
   border-radius: 2px !important;
   margin-right: -3px !important;
   padding: 10px 3px 10px 7px !important;
+}
+
+.post-formm .post-formm-header {
+  background: var(--primary-color);
+  padding: 0.5rem;
+}
+
+.post {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 2rem;
+  align-items: center;
+}
+
+.post > div:first-child {
+  text-align: center;
+}
+
+.post img {
+  width: 100px;
+}
+
+.post .comment-count {
+  background: var(--light-color);
+  color: var(--primary-color);
+  padding: 0.1rem 0.2rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+.post .post-date {
+  color: #aaa;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
 }
