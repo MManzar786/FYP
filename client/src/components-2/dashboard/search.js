@@ -9,8 +9,7 @@ class Search extends Component {
       query: "",
       result: []
     };
-  
-  
+  }
 
   // async componentDidMount() {
   // const res = await axios.get("/search");
@@ -30,22 +29,14 @@ class Search extends Component {
 
   render() {
     return (
-
       <div>
         <form onSubmit={this.handleSearch}>
-        <div
-          className="page-header"
-          style={{
-            backgroundColor: "orange"
-          }}
-          >
           <input
             onChange={e => this.handleInput(e)}
             name="search"
             type="text"
           />
           <input type="submit" value="Search" name="search" />
-          </div>
         </form>
         <div>
           {this.state.result.map(d => {
