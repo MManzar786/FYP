@@ -1,5 +1,6 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import axios from "axios";
+import Navbar from "./../layout/navbar.js";
 
 class Search extends Component {
   constructor(props) {
@@ -8,7 +9,8 @@ class Search extends Component {
       query: "",
       result: []
     };
-  }
+  
+  
 
   // async componentDidMount() {
   // const res = await axios.get("/search");
@@ -28,14 +30,22 @@ class Search extends Component {
 
   render() {
     return (
+
       <div>
         <form onSubmit={this.handleSearch}>
+        <div
+          className="page-header"
+          style={{
+            backgroundColor: "orange"
+          }}
+          >
           <input
             onChange={e => this.handleInput(e)}
             name="search"
             type="text"
           />
           <input type="submit" value="Search" name="search" />
+          </div>
         </form>
         <div>
           {this.state.result.map(d => {

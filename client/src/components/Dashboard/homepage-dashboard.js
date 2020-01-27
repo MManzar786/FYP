@@ -16,7 +16,7 @@ export default class Content extends Component {
             <div className="row">
               <div className="col-md-12">
                 <h2 className="title" style={{ color: "black" }}>
-                  Edit Profile1
+                  Edit Profile
                 </h2>
                 <form>
                   <input

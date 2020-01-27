@@ -24,4 +24,8 @@ router.post("/search", async (req, res) => {
   }
 });
 
+router.post("/", function(req, res) {
+  var name = req.body.name;
+});
+
 module.exports = router;
